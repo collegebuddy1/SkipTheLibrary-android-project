@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stl.skipthelibrary">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/default_avatar"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/default_avatar_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.MapBoxActivity"></activity>
+        <activity android:name=".Activities.MapViewActivity"></activity>
+        <activity android:name=".Activities.SearchActivity"></activity>
+        <activity android:name=".Activities.ScannerActivity" />
+        <activity
+            android:name=".Activities.AddBooksActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Activities.ProfileActivity" />
+        <activity android:name=".Activities.SignUpActivity" />
+        <activity android:name=".Activities.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.BorrowersBooksActivity" />
+        <activity android:name=".Activities.NotificationActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".Activities.MyBooksActivity" />
+
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity android:name=".Activities.ViewBookActivity" />
+        <activity android:name=".Activities.RateUserActivity"></activity>
+    </application>
+
+</manifest>
